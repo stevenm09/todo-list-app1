@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #eef3fb;
+  color: #12233f;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(18, 35, 63, 0.12);
+}
+
+h1 { margin: 0 0 20px; font-size: 1.6rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.form { display: flex; gap: 8px; }
+.form input {
+  flex: 1; padding: 12px 14px; font-size: 1rem;
+  border: 1px solid #c8d4e8; border-radius: 10px;
+}
+.form input:focus { outline: 2px solid #1a63d8; border-color: transparent; }
+
+button {
+  cursor: pointer; font: inherit; border: 0; border-radius: 10px;
+  padding: 12px 16px; background: #1a63d8; color: #fff; font-weight: 600;
+}
+button:hover { background: #154fb0; }
+
+.filter { display: flex; gap: 8px; margin: 16px 0; }
+.filter button {
+  background: #e3ebf8; color: #12233f; padding: 8px 14px; font-weight: 500;
+}
+.filter button.aktif { background: #12233f; color: #fff; }
+
+.daftar { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border: 1px solid #e3ebf8; border-radius: 10px;
+}
+.item span { flex: 1; word-break: break-word; }
+.item.selesai span { text-decoration: line-through; color: #7a889f; }
+.item input[type="checkbox"] { width: 18px; height: 18px; }
+.item .hapus {
+  background: transparent; color: #c0392b; padding: 4px 8px; font-size: 1.1rem;
+}
+.item .hapus:hover { background: #fdecea; }
+
+.kosong { text-align: center; color: #7a889f; padding: 16px 0; }
+
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 16px; font-size: 0.9rem; color: #4b5b75;
+}
+.link { background: transparent; color: #1a63d8; padding: 4px 6px; font-weight: 500; }
+.link:hover { background: #eef3fb; }

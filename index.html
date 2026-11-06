@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>To-Do List</h1>
+
+    <form id="form-tugas" class="form">
+      <label for="input-tugas" class="sr-only">Tugas baru</label>
+      <input id="input-tugas" type="text" placeholder="Tulis tugas baru..." maxlength="100" required>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <div class="filter" role="group" aria-label="Filter tugas">
+      <button type="button" data-filter="semua" class="aktif">Semua</button>
+      <button type="button" data-filter="aktif">Aktif</button>
+      <button type="button" data-filter="selesai">Selesai</button>
+    </div>
+
+    <ul id="daftar" class="daftar"></ul>
+
+    <footer class="footer">
+      <span id="hitung">0 tugas tersisa</span>
+      <button type="button" id="hapus-selesai" class="link">Hapus yang selesai</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
